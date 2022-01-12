@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+</head>
+<body onload="load()" >
+<div class="overlay">
+    <p class="intro">welcome to time</p>
+</div>
+    <div class="conent">
+            <p id="dayscover">day:<br><span id="days">monday</span></p>
+        <p id="intro"><span id="time">time:</span><br><span id="min"></span> <span class="min12">AM</span></p>
+    </div>
+</body>
+
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+    #dayscover{
+        color: white;
+        font-weight: 800;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #days{
+        color: white;
+        font-weight: 900;
+        padding: 12px;
+    }
+    .min12{
+        background-color:#2E94E3 ;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 10px;
+        text-transform: uppercase;
+    }
+
+    .overlay{
+        background-color: black;
+        width: 130%;
+        height: 100vh;
+        position: fixed;
+        top:0%;
+
+           left: -14%;
+
+        z-index: 200;
+        text-align: center;
+       font-size: 100px;
+  color: white;
+  opacity: 1;
+
+    }
+    .overlay-none{
+        background-color: black;
+        width: 0;
+        opacity: 0;
+        height: 0;
+        position: fixed;
+        top:0%;
+
+           left: -14%;
+
+        z-index: -1;
+        text-align: center;
+       font-size: 100px;
+  color: transparent;
+
+    }
+    .intro{
+  position: relative;
+right: 26px;
+top: 223px;
+animation-name: fade;
+transition: ease-in-out 2s;
+
+letter-spacing: 42px;
+opacity:0;
+animation: fadeIn 2s ease-in forwards ;
+    }
+@keyframes fadeIn{
+   
+    to{
+        opacity: 1;
+    }       
+}
+    body{
+        background-color: #10101E;
+    }
+    .conent{
+        overflow: hidden;
+        width: fit-content;
+        font-size: 72px;
+        height: 360px;
+        text-align: center;
+        border: 3px solid #2E94E3;
+        background-color: 10101E;
+        position: relative;
+        left: 778px;
+        top: 260px;
+        transition: 2s; 
+        border-radius: 15px;
+        -webkit-box-reflect: below 2px linear-gradient(transparent,rgba(255,255,255,0.3));
+        transition-property: background-color, box-shadow;
+        
+    }
+    .conent:hover{
+        background-color: #2E94E3;
+        box-shadow: 0px,0px, 40px  #2E94E3 ;
+        cursor: pointer;
+        
+    }
+    #time{
+          color: white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    span{
+        color: white;
+        font-weight: 900;
+        font-size: larger;
+        text-align: center;
+
+    }
+  
+    @media (max-width:1056px){
+     
+        .conent{
+        
+        width: fit-content;
+        font-size: 72px;
+        height: 400px;
+        text-align: center;
+        border: 3px solid #2E94E3;
+        background-color: 10101E;
+        position: relative;
+        left: 278px;
+        top: 260px;
+        transition: 2s; 
+        border-radius: 15px;
+        -webkit-box-reflect: below 2px linear-gradient(transparent,rgba(255,255,255,0.3));
+        transition-property: background-color, box-shadow;
+        
+    }
+    .overlay{
+        background-color: black;
+        width: 130%;
+        height: 100vh;
+        position: fixed;
+        top:0%;
+
+           left: -14%;
+
+        z-index: 200;
+        text-align: center;
+       font-size: 60px;
+  color: white;
+  opacity: 1;
+
+    }
+    .overlay-none{
+        background-color: black;
+        width: 0;
+        opacity: 0;
+        height: 0;
+        position: fixed;
+        top:0%;
+
+           left: -14%;
+
+        z-index: -1;
+        text-align: center;
+       font-size: 100px;
+  color: transparent;
+
+    }
+    .intro{
+  position: relative;
+right: 26px;
+top: 223px;
+animation-name: fade;
+transition: ease-in-out 2s;
+
+letter-spacing: 12px;
+opacity:0;
+animation: fadeIn 2s ease-in forwards ;
+    }
+    }
+    @media (max-width:826px){
+        .conent{
+        
+        width: fit-content;
+        font-size: 72px;
+        height: 400px;
+        text-align: center;
+        border: 3px solid #2E94E3;
+        background-color: 10101E;
+        position: relative;
+        left: 178px;
+        top: 260px;
+        transition: 2s; 
+        border-radius: 15px;
+        -webkit-box-reflect: below 2px linear-gradient(transparent,rgba(255,255,255,0.3));
+        transition-property: background-color, box-shadow;
+        
+    }
+    .overlay{
+        background-color: black;
+        width: 130%;
+        height: 100vh;
+        position: fixed;
+        top:0%;
+
+           left: -14%;
+
+        z-index: 200;
+        text-align: center;
+       font-size: 60px;
+  color: white;
+  opacity: 1;
+
+    }
+    .overlay-none{
+        background-color: black;
+        width: 0;
+        opacity: 0;
+        height: 0;
+        position: fixed;
+        top:0%;
+
+           left: -14%;
+
+        z-index: -1;
+        text-align: center;
+       font-size: 60px;
+  color: transparent;
+
+    }
+    .intro{
+  position: relative;
+right: 26px;
+top: 223px;
+animation-name: fade;
+transition: ease-in-out 2s;
+width: auto;
+letter-spacing: 1px;
+opacity:0;
+animation: fadeIn 2s ease-in forwards ;
+    }
+    @media (max-width:678px){
+        .conent{
+        
+        width: fit-content;
+        font-size: 72px;
+        height: 400px;
+        text-align: center;
+        border: 3px solid #2E94E3;
+        background-color: 10101E;
+        position: relative;
+        left: 78px;
+        top: 260px;
+        transition: 2s; 
+        border-radius: 15px;
+        -webkit-box-reflect: below 2px linear-gradient(transparent,rgba(255,255,255,0.3));
+        transition-property: background-color, box-shadow;
+        
+    }
+    .intro{
+  position: relative;
+left: 120px;
+top: -6px;
+animation-name: fade;
+transition: ease-in-out 2s;
+width: 8px;
+letter-spacing: 1px;
+opacity:0;
+animation: fadeIn 2s ease-in forwards ;
+    }
+    }
+    @media (max-width:412px){
+        #time{
+          color: white;
+        text-align: center;
+        width: 10px;
+      
+    }
+    span{
+        color: white;
+        font-weight: 900;
+        font-size: larger;
+        text-align: center;
+        width: 1px;
+
+    }
+        .conent{
+        
+        width: 307px;
+        font-size: 62px;
+        height: 400px;
+        text-align: center;
+        border: 3px solid #2E94E3;
+        background-color: 10101E;
+        position: relative;
+        left: -13px;
+        top: 260px;
+        transition: 2s; 
+        border-radius: 15px;
+        -webkit-box-reflect: below 2px linear-gradient(transparent,rgba(255,255,255,0.3));
+        transition-property: background-color, box-shadow;
+        
+    }
+    .intro{
+  position: relative;
+right: -60px;
+top: 30px;
+animation-name: fade;
+transition: ease-in-out 2s;
+width: 8px;
+letter-spacing: 1px;
+opacity:0;
+animation: fadeIn 2s ease-in forwards ;
+    }
+}
+    
+    @media (max-width:500px){
+        #time{
+          color: white;
+        text-align: center;
+        width: 10px;
+      
+    }
+    span{
+        color: white;
+        font-weight: 900;
+        font-size: larger;
+        text-align: center;
+        width: 1px;
+
+    }
+        .conent{
+        
+        width: 347px;
+        font-size: 52px;
+        height: 430px;
+        text-align: center;
+        border: 3px solid #2E94E3;
+        background-color: 10101E;
+        position: relative;
+        left: -13px;
+        top: 260px;
+        transition: 2s; 
+        border-radius: 15px;
+        -webkit-box-reflect: below 2px linear-gradient(transparent,rgba(255,255,255,0.3));
+        transition-property: background-color, box-shadow;
+        
+    }
+    .intro{
+  position: relative;
+right: -60px;
+top: 30px;
+animation-name: fade;
+transition: ease-in-out 2s;
+width: 8px;
+letter-spacing: 1px;
+opacity:0;
+animation: fadeIn 2s ease-in forwards ;
+    }
+}
+    }
+    @media (max-width:239px){
+        #time{
+          color: white;
+        text-align: center;
+        width: 10px;
+      
+    }
+    span{
+        color: white;
+        font-weight: 900;
+        font-size: larger;
+        text-align: center;
+        width: 1px;
+
+    }
+        .conent{
+        
+        width: 347px;
+        font-size: 52px;
+        height: 430px;
+        text-align: center;
+        border: 3px solid #2E94E3;
+        background-color: 10101E;
+        position: relative;
+        left: -13px;
+        top: 260px;
+        transition: 2s; 
+        border-radius: 15px;
+        -webkit-box-reflect: below 2px linear-gradient(transparent,rgba(255,255,255,0.3));
+        transition-property: background-color, box-shadow;
+        
+    }
+    .intro{
+        font-size: 70px;
+  position: relative;
+left: 70px;
+top: 460px;
+height: 100vh;
+animation-name: fade;
+transition: ease-in-out 2s;
+width: 8px;
+letter-spacing: 1px;
+opacity:0;
+animation: fadeIn 2s ease-in forwards ;
+    }
+    .overlay{
+        background-color: black;
+        width: 130%;
+        height: 200vh;
+        position: fixed;
+        top:0%;
+
+           left: -14%;
+
+        z-index: 200;
+        text-align: center;
+       font-size: 60px;
+  color: white;
+  opacity: 1;
+
+    }
+   .overlay-none{
+        background-color: black;
+        width: 0;
+        opacity: 0;
+        height: 0;
+        position: fixed;
+        top:0%;
+
+           left: -14%;
+
+        z-index: -1;
+        text-align: center;
+       font-size: 100px;
+  color: transparent;
+
+    }
+}
+  
+    
+</style>
+<script src="./time.js"></script>
+
+</html>
